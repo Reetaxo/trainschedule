@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let's Get Away</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+<body>
+
+<div class="container">
+<br><br>
+
+        <div class="jumbotron">
+                <h1 class="text-center">Take a Look</h1>
+                <h3 class="text-center">Where Would you Like to Go?!</h3>
+              </div>
+
+
+              <table class="table table-bordered table-light">
+                    <thead>
+                      <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency</th>
+                        <th scope="col">Next Arrival</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+    <!-- <div class="row">
+        <div class="col-sm">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, sapiente nostrum? Fuga, officiis! Cupiditate, vero? Quasi a quam cum laudantium nesciunt, et sapiente! Voluptas, libero alias? Officiis eius nisi quas.
+        </div>
+
+
+        <div class="col-sm">
+        One of three columns
+        </div>
+
+
+        <div class="col-sm">
+        One of three columns
+        </div>
+
+        <div class="col-sm">
+                One of three columns
+                </div>
+
+                <div class="col-sm">
+                        One of three columns
+                        </div>
+ 
+    </div> -->
+
+    <br><br>
+
+    <div class="row content">
+            <div class="col-md">
+              <div class="panel">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Add A Train</h3>
+                </div>
+                <div class="panel-body">
+                <span class="help-block">You must fill out all input fields!</span>
+                  <form>
+                    <div class="form-group">
+                      <label for="trainName">Train Name</label>
+                      <input type="text" required class="form-control" id="trainName" placeholder="Train Name">
+                    </div>
+                    <div class="form-group">
+                      <label for="trainDestination">Destination</label>
+                      <input type="text" required class="form-control" id="trainDestination" placeholder="Destination">
+                    </div>
+                    <div class="form-group">
+                      <label for="firstTrain">First Train Time<br/><small>(HH:mm Military Time)</small></label>
+                      <input type="text" required class="form-control" id="firstTrain" placeholder="First Train Time">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="trainFrequency">Frequency (min)</label>
+                      <input type="text" required class="form-control" id="trainFrequency" placeholder="Frequency">
+                    </div>
+                  
+                    <button class="submit" id="add-train">Submit</button>
+
+                  </form>
+
+
+    <!-- <div class="row">
+            <div class="col-lg-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Make Your Bid</h3>
+                </div>
+                <div class="panel-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="train-name">Your Name</label>
+                      <input class="form-control" id="train-name" type="text">
+                    </div>
+                    <div class="form-group">
+                      <label for="destination">Your Price</label>
+                      <input class="form-control" id="destination" type="number">
+                    </div>
+                    <button class="btn btn-primary" id="submit-bid" type="submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div> -->
+
+
+<br><br>
+
+</div>
+</div>
+
+  <!-- Added Moment JS -->
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>       
+
+<!-- Firebase train database -->
+<script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/javascript/train.js"></script>    
+
+</script>   
+</body>
+</html>
