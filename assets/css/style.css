@@ -1,5 +1,6 @@
 body { 
-    background-image: ("assets/images/map.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    /* background-image: ("images/map.jpg"); */
+    /* background-size: 100%; */
+    /* background-repeat: no-repeat; */
+    background-color: lightcoral;
   }
