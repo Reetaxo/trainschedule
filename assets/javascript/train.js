@@ -74,7 +74,7 @@ childData.val().trainFrequency;
 
 
 // append new train data into table
-$("#train-table > tbody").append("<tr><td>" + trainName + "<tr><td>" + trainDestination + "<tr><td>" + firstTrain + "<tr><td>" + trainFrequency);
+$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>"  + trainDestination + "</td><td>" + firstTrain + "</td><td>" + trainFrequency + "</td></tr>");
 
 });
 
