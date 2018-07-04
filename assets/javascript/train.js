@@ -31,6 +31,32 @@ var trainDestination = $("#trainDestination").val().trim()
 var firstTrain = $("#firstTrain").val().trim()
 var trainFrequency = $("#trainFrequency").val().trim()
 
+if(trainName === ""){
+  return alert("please enter train name")
+} else if (trainDestination === ""){
+  return alert("please enter a destination")
+} else if(firstTrain === "") {
+  return alert("please enter train time")
+}
+else if (trainFrequency===""){
+  return alert ("please enter frequency")
+}
+
+console.log("train added")
+// make an alert so users can't leave it blank
+// if(trainName !== "" && trainDestination !== ""){
+  database.ref().push({
+    trainName,
+     trainDestination,
+     firstTrain,
+     trainFrequency
+     
+ });
+// } 
+// else {
+
+// }
+
 // var user = {
 //    trainName,
 //     trainDestination,
@@ -39,19 +65,12 @@ var trainFrequency = $("#trainFrequency").val().trim()
     
 // };
 // uploads employee data to database using .psh method
-database.ref().push({
-   trainName,
-    trainDestination,
-    firstTrain,
-    trainFrequency
-    
-});
 
 // consolelog users input
-console.log(trainName);
-console.log(trainDestination);
-console.log(firstTrain);
-console.log(trainFrequency);
+// console.log(trainName);
+// console.log(trainDestination);
+// console.log(firstTrain);
+// console.log(trainFrequency);
 
 // alert users of added train
 alert("Your train is on the way");
@@ -63,20 +82,19 @@ $("#firstTrain").val("");
 $("#trainFrequency").val("");
 
 
+});
 // 
 database.ref().on("child_added", function(childData) {
-console.log(childData.val());
-
-childData.val().trainName;
-childData.val().trainDestination;
-childData.val().firstTrain;
-childData.val().trainFrequency;
-
-
-// append new train data into table
-$("#train-table > tbody").append("<tr><td>" + trainName + "</td><td>"  + trainDestination + "</td><td>" + firstTrain + "</td><td>" + trainFrequency + "</td></tr>");
-
-});
-
-});
-
+  // console.log(childData.val());
+  
+  // console.log(childData.val().trainName);
+  
+  childData.val().trainDestination;
+  childData.val().firstTrain;
+  childData.val().trainFrequency;
+  
+  
+  // append new train data into table
+  $("#train-table > tbody").append("<tr><td>" + childData.val().trainName + "</td><td>"  + childData.val().trainDestination + "</td><td>" + childData.val().firstTrain + "</td><td>" + childData.val().trainFrequency + "</td></tr>");
+  
+  });
